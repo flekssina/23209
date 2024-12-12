@@ -212,7 +212,7 @@ TEST(CircularBufferTest, SetCapacity) {
     EXPECT_EQ(buffer.capacity(), 2);
 }
 
-TEST(CircularBufferTest, ResizeTest) { //???
+TEST(CircularBufferTest, ResizeTest) { 
     CircularBuffer buffer(3);
     buffer.resize(3, 'A');
     EXPECT_EQ(buffer.size(), 3);

@@ -7,11 +7,12 @@
 #include <vector>
 #include <stdexcept>
 
-// Объявление шаблонного класса CSVParser
 template <typename... Args>
-class CSVParser {
+class CSVParser 
+{
 public:
-    class Iterator {
+    class Iterator 
+{
     public:
         using value_type = std::tuple<Args...>;
 

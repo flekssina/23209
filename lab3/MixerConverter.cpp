@@ -10,7 +10,7 @@ void MixerConverter::apply(WavFile& wav) {
     WavFile mixStream(inputFile);
     auto& primarySamples = wav.getSamples();
     auto& mixSamples = mixStream.getSamples();
-    int sampleRate = 44100; // Assuming 44100 Hz
+    int sampleRate = 44100; 
 
     size_t insertIndex = static_cast<size_t>(insertTime * sampleRate);
     insertIndex = std::min(insertIndex, primarySamples.size());
@@ -28,7 +28,7 @@ std::shared_ptr<Converter> MixerConverter::create(const std::vector<std::string>
     std::string input = params[0];
     double insertTime = std::stod(params[1]);
 
-    // Подстановка $n в пути файлов
+   
     if (!input.empty() && input[0] == '$') {
         int index = std::stoi(input.substr(1)) - 1; // Преобразуем $n в индекс
         if (index < 0 || index >= inputFiles.size()) {

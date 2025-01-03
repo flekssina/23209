@@ -14,7 +14,7 @@ void WavFile::save(const std::string& outputFilePath) {
         throw std::runtime_error("Could not open output file: " + outputFilePath);
     }
 
-    // Write WAV header
+    
     uint32_t dataChunkSize = samples.size() * sizeof(int16_t);
     uint32_t fileSize = 36 + dataChunkSize;
 

@@ -30,7 +30,7 @@ std::shared_ptr<Converter> MixerConverter::create(const std::vector<std::string>
 
    
     if (!input.empty() && input[0] == '$') {
-        int index = std::stoi(input.substr(1)) - 1; // Преобразуем $n в индекс
+        int index = std::stoi(input.substr(1)) - 1; 
         if (index < 0 || index >= inputFiles.size()) {
             throw std::invalid_argument("Invalid file index: " + input);
         }

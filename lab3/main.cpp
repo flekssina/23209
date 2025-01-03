@@ -27,13 +27,10 @@ int main(int argc, char* argv[]) {
             inputFiles.push_back(argv[i]);
         }
 
-        // Parse configuration
         ConfigParser configParser(configFilePath);
 
         auto converters = configParser.parse(inputFiles);
 
-
-        // Process audio
         SoundProcessor processor(inputFiles, converters);
         processor.process(outputFilePath);
 
